@@ -16,7 +16,7 @@ const Exchanges = () => {
   const [exchanges, setExchanges] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-
+  
   useEffect(() => {
     const fetchExchanges = async () => {
       try {
@@ -33,7 +33,7 @@ const Exchanges = () => {
 
   if (error)
     return <ErrorComponent message={"Error While Fetching Exchanges"} />;
-
+  
   return (
     <Container maxW={"container.xl"}>
       {loading ? (
